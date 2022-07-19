@@ -1,2 +1,1 @@
-# angular
-Learn Angular
+# Learn and practice in Angular
