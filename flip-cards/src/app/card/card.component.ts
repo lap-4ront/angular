@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../card';
 import { CARDS } from '../mock-cards';
 
 @Component({
@@ -16,8 +15,8 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showCard(card: Card): void {
-    console.log(card)
+  flipCard(innerCard: HTMLDivElement): void {
+    innerCard.classList.toggle('transformed')
   }
 
 }
