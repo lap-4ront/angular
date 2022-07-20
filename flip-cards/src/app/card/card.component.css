@@ -1,0 +1,60 @@
+@property --gradient-begin {
+  syntax: "<color>";
+  initial-value: hsla(50, 80%, 60%, 1);
+  inherits: false;
+}
+
+@property --gradient-end {
+  syntax: "<color>";
+  initial-value: hsla(220, 60%, 70%, 1);
+  inherits: false;
+}
+
+.cards {
+  --gradient-begin: hsla(50, 80%, 60%, 1);
+  --gradient-end: hsla(220, 60%, 70%, 1);
+
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  height: 100%;
+}
+
+.card {
+  height: 400px;
+  max-width: 300px;
+  position: relative;
+  width: 100%;
+}
+
+.card-link {
+  align-items: center;
+  background: linear-gradient(45deg, var(--gradient-begin), var(--gradient-end));
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transition: --gradient-begin 0.5s ease, --gradient-end 0.5s ease;
+  width: 100%;
+}
+
+.card-link:hover {
+  --gradient-end: hsla(50, 80%, 60%, 1);
+  --gradient-begin: hsla(240, 50%, 90%, 1);
+}
+
+
+@media screen and (max-width: 992px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    font-size: 90%;
+    height: 200px;
+    max-width: 250px;
+  }
+}

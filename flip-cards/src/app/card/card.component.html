@@ -1,0 +1,6 @@
+<div class="cards">
+  <div class="card" *ngFor="let card of cards" (click)="showCard(card)">
+    <a href="#" class="card-link">Click to flip
+      the {{card.title}} card</a>
+  </div>
+</div>
