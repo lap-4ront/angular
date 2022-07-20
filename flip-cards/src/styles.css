@@ -23,3 +23,12 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+
+h1,
+p {
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
