@@ -1,6 +1,17 @@
+<h1 class="center main-title">Core concepts of Angular</h1>
+
 <div class="cards">
-  <div class="card" *ngFor="let card of cards" (click)="showCard(card)">
-    <a href="#" class="card-link">Click to flip
-      the {{card.title}} card</a>
+  <div class="card" *ngFor="let card of cards" (click)="flipCard(cardInner)">
+    <div class="card__inner" #cardInner>
+
+      <div class="card__inner-front">
+        <a href="#" class="card__inner-link">{{card.title}}</a>
+      </div>
+
+      <div class="card__inner-back" [style.background-color]="card.color">
+        <p>{{card.description}}</p>
+      </div>
+
+    </div>
   </div>
 </div>
