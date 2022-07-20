@@ -10,6 +10,11 @@
   inherits: false;
 }
 
+.main-title {
+  font-size: 200%;
+  margin-block-end: 20px;
+}
+
 .cards {
   --gradient-begin: hsla(50, 80%, 60%, 1);
   --gradient-end: hsla(220, 60%, 70%, 1);
@@ -22,16 +27,52 @@
 }
 
 .card {
+  background: transparent;
   height: 400px;
   max-width: 300px;
+  perspective: 1000px;
   position: relative;
   width: 100%;
 }
 
-.card-link {
+.card__inner {
+  color: hsl(236, 34%, 28%);
+  height: 100%;
+  line-height: 1.4;
+  position: relative;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.transformed {
+  transform: rotateY(180deg);
+}
+
+.card__inner-front,
+.card__inner-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.card__inner-back {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
+
+.card__inner-link {
   align-items: center;
   background: linear-gradient(45deg, var(--gradient-begin), var(--gradient-end));
   display: flex;
+  font-size: 150%;
   justify-content: center;
   height: 100%;
   left: 0;
@@ -41,20 +82,30 @@
   width: 100%;
 }
 
-.card-link:hover {
+.card__inner-link:hover {
   --gradient-end: hsla(50, 80%, 60%, 1);
   --gradient-begin: hsla(240, 50%, 90%, 1);
 }
 
 
 @media screen and (max-width: 992px) {
+  .main-title {
+    font-size: 150%;
+    margin-block-end: 10px;
+  }
+
   .cards {
     flex-direction: column;
   }
 
   .card {
     font-size: 90%;
-    height: 200px;
-    max-width: 250px;
+    height: 180px;
+    max-width: 230px;
+  }
+
+  .card__inner-back {
+    font-size: 70%;
+    padding: 5px;
   }
 }
