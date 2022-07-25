@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * VARIABLES
+ */
+
+:root {
+  /* COLORS */
+  --background-color: hsl(175deg 90% 95%);
+  --primary-color: hsl(140deg 100% 60%);
+  --secondary-color: hsl(140deg 90% 80%);
+  --text-color: hsl(140deg 30% 20%);
+
+  /* SIZES */
+  --text-normal: 1.2rem;
+}
+
+/*
+ * RESETS
+ */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/*
+ * COMMON STYLES
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-normal);
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
