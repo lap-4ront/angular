@@ -4,12 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { BookDataComponent } from './book-data/book-data.component';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +14,7 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
