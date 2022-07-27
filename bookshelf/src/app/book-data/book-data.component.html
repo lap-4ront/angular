@@ -1,28 +1,40 @@
-<section>
-  <h2>Add details of the book you read</h2>
-  <form>
-    <fieldset class="author">
+<section class="bookDataContainer">
+  <h2>Add info about the book you've read</h2>
+  <form class="dataForm">
+    <fieldset class="dataForm__author author">
       <legend>Author</legend>
-      <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+      <div class="author__name">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Walter">
+        </mat-form-field>
       </div>
-      <div>
-        <label for="surname">Surname</label>
-        <input type="text" name="surname" id="surname">
+      <div class="author__surname">
+        <mat-form-field appearance="outline">
+          <mat-label>Surname</mat-label>
+          <input matInput placeholder="Scott">
+        </mat-form-field>
       </div>
     </fieldset>
-    <fieldset class="book">
+
+    <fieldset class="dataForm__book book">
       <legend>Book</legend>
-      <div>
-        <label for="title">Book title</label>
-        <input type="text" name="title" id="title">
+      <div class="book__title">
+        <mat-form-field appearance="outline">
+          <mat-label>Book title</mat-label>
+          <input type="text" matInput placeholder="Rob Roy">
+        </mat-form-field>
       </div>
-      <div>
-        <label for="publication">Publication date</label>
-        <input type="number" name="publication" id="publication">
+      <div class="book__publication">
+        <mat-form-field appearance="outline">
+          <mat-label>Publication date</mat-label>
+          <input matInput type="number" max="2022" [value]="getYear()">
+        </mat-form-field>
       </div>
     </fieldset>
-    <button type="button">Add book to shelf</button>
+
+    <!-- <button type="button">Add book to shelf</button> -->
+
+    <button mat-stroked-button class="add-btn">Add book to shelf</button>
   </form>
 </section>
