@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BookDataComponent } from './book-data/book-data.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { BookDataComponent } from './book-data/book-data.component';
     BookDataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
