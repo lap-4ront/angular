@@ -12,9 +12,9 @@ export class BookDataComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public getYear() {
-    return this.year = new Date().getFullYear();
-  }
+  // public getYear() {
+  //   return this.year = new Date().getFullYear();
+  // }
 
   public year!: number;
 

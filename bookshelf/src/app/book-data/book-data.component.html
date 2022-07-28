@@ -1,5 +1,5 @@
 <section class="bookDataContainer">
-  <h2>Add info about the book you've read</h2>
+  <h2 class="bookDataTitle">Add info about the book</h2>
   <form class="dataForm">
     <fieldset class="dataForm__author author">
       <legend>Author</legend>
@@ -28,13 +28,11 @@
       <div class="book__publication">
         <mat-form-field appearance="outline">
           <mat-label>Publication date</mat-label>
-          <input matInput type="number" max="2022" [value]="getYear()">
+          <input matInput type="number" max="2022" value="1817">
         </mat-form-field>
       </div>
     </fieldset>
 
-    <!-- <button type="button">Add book to shelf</button> -->
-
-    <button mat-stroked-button class="add-btn">Add book to shelf</button>
+    <button mat-stroked-button class="dataForm__btn">Add book to shelf</button>
   </form>
 </section>
