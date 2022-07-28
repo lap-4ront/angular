@@ -1,0 +1,23 @@
+.bookShelf__title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.bookShelf__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 15px;
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.card {
+  padding: 0.8rem;
+}
+
+.card__cover {
+  margin: 0 auto 15px;
+  width: 100%;
+}
