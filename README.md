@@ -14,3 +14,8 @@
   <summary style="font-size: 1.5rem; font-weight: 700;">bookshelf</summary>
   <h3><a href="./bookshelf">bookshelf</a></h3>
 </details>
+
+<details>
+  <summary style="font-size: 1.5rem; font-weight: 700;">4ront-blog</summary>
+  <h3><a href="./4ront-blog">4ront-blog</a></h3>
+</details>
