@@ -48,7 +48,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./bookshelf/node_modules/cz-conventional-changelog"
+      "path": "./4ront-blog/node_modules/cz-conventional-changelog"
     }
   }
 }
